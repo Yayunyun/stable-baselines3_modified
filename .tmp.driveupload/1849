@@ -462,7 +462,7 @@ class RolloutBuffer(BaseBuffer):
             )
             self.advantages[step] = last_gae_lam
             ############################
-            if step % 1000 == 0:
+            if step%1000==0:
                 print(self.advantages[step])
         # TD(lambda) estimator, see Github PR #375 or "Telescoping in TD(lambda)"
         # in David Silver Lecture 4: https://www.youtube.com/watch?v=PnHCvfgC_ZA
